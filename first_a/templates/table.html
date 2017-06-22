@@ -1,0 +1,62 @@
+{% load my_filters %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div>
+
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Январь</a></li>
+    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Февраль</a></li>
+    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Март</a></li>
+    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Апрель</a></li>
+    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Май</a></li>
+    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Июнь</a></li>
+    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Июль</a></li>
+    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Август</a></li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="home">
+
+    </div>
+    <div role="tabpanel" class="tab-pane" id="profile">
+        <table class="table table-hover">
+    <tr>
+    <td>Ученик</td>
+        {% for i in 31|times %}
+            <td>{{ i }}</td>
+        {% endfor %}
+    </tr>
+    {% for item in 1|students %}
+    <tr>
+        <td>{{ item }}</td>
+        {% for i in 31|times %}
+            <td>{{ 5 }}</td>
+        {% endfor %}
+
+    </tr>
+    {% endfor %}
+</table>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="messages"></div>
+    <div role="tabpanel" class="tab-pane" id="settings"></div>
+  </div>
+
+</div>
+
+
+</body>
+</html>
+
